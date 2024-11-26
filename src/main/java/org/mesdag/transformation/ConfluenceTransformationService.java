@@ -16,7 +16,7 @@ import java.util.function.Function;
 /**
  * @author Westernat
  */
-public class MesdagTransformationService implements ITransformationService {
+public class ConfluenceTransformationService implements ITransformationService {
     private final Map<String, Function<ClassVisitor, ClassVisitor>> interfaceVisitors = new ConcurrentHashMap<>();
 
     @Override
