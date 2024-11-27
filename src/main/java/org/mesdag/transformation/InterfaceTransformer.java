@@ -30,7 +30,7 @@ public class InterfaceTransformer implements ITransformer<ClassNode> {
             node.accept(visitor.apply(writer));
             ClassNode dest = new ClassNode();
             new ClassReader(writer.toByteArray()).accept(dest, 0);
-            ConfluenceTransformation.LOGGER.info("Transformed {}", node.name);
+            ConfluenceTransformationService.LOGGER.info("Transformed {}", node.name);
             return dest;
         }
         return node;

@@ -6,6 +6,8 @@ import cpw.mods.modlauncher.api.ITransformer;
 import org.jetbrains.annotations.NotNull;
 import org.mesdag.transformation.visitors.ContainerInterfaceVisitor;
 import org.objectweb.asm.ClassVisitor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Map;
@@ -17,6 +19,8 @@ import java.util.function.Function;
  * @author Westernat
  */
 public class ConfluenceTransformationService implements ITransformationService {
+    public static final Logger LOGGER = LoggerFactory.getLogger("Confluence Transformation");
+
     private final Map<String, Function<ClassVisitor, ClassVisitor>> interfaceVisitors = new ConcurrentHashMap<>();
 
     @Override
